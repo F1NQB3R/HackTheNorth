@@ -1,1 +1,13 @@
+nav {
+    background-color: #AA0000;
+    max-width: 100vw;
+	box-shadow: 0 0 10px gray;
+}
 
+.nav-link {
+    transition-duration: 0.5s;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 3px white;
+}
