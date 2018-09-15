@@ -8,12 +8,13 @@
       storageBucket: "hackthenorth-16b34.appspot.com",
       messagingSenderId: "1089172554056"
   };
+  
   firebase.initializeApp(config);
 
   //Get Elements
   const txtEmail = document.getElementById('txtEmail');
   const txtPassword = document.getElementById('txtPassword');
-  const btnLongin = document.getElementById('btnLogin');
+  const btnLogin = document.getElementById('btnLogin');
   const btnSignUp = document.getElementById('btnSignUp');
   const btnLogout = document.getElementById('btnLogout');
 
@@ -21,21 +22,21 @@
   btnLogin.addEventListener("click", e => {
     //Get email / pass
     const email = txtEmail.value;
-    const pass = txtPassword.value;
+    const password = txtPassword.value;
     const auth = firebase.auth();
     //Sign in
-    const promise = auth.signInWithEmailAndPassword(email, "password");
+    const promise = auth.signInWithEmailAndPassword(email, password);
     promise.catch(e=>console.log(e.message));
   });
 
-    btnSignUp.addEventListener("click", e=> {
+  btnSignUp.addEventListener("click", e=> {
     //Get email / pass
     //TODO: CHECK 4 REAL NUMBER
     const email = txtEmail.value;
-    const pass = txtPassword.value;
+    const password = txtPassword.value;
     const auth = firebase.auth();
     //Sign in
-    const promise = auth.createUserWithEmailAndPassword(email, "password");
+    const promise = auth.createUserWithEmailAndPassword(email, password);
     promise.catch(e=>console.log(e.message));
   });
 
