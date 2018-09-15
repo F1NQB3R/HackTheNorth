@@ -44,8 +44,8 @@
   });
 
   //Realtime Listener
-  firebase.auth().onAuthStateChanged(firebaseuser => {
-    if (firebaseuser){
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser){
       console.log(firebaseUser);
       btnLogout.classList.remove('hide');
     }else{
@@ -53,6 +53,4 @@
       btnLogout.classList.add('hide');
     }
   });
-
-
 }());
