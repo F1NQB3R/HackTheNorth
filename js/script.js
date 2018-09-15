@@ -18,28 +18,28 @@
   const btnLogout = document.getElementById('btnLogout');
 
   //Add login event
-  btnLogin.addeventListener('click', e => {
+  btnLogin.addEventListener("click", e => {
     //Get email / pass
     const email = txtEmail.value;
     const pass = txtPassword.value;
     const auth = firebase.auth();
     //Sign in
-    const promise = auth.signInWithEmailAndPassword(email,password);
+    const promise = auth.signInWithEmailAndPassword(email, "password");
     promise.catch(e=>console.log(e.message));
   });
 
-  btnSignUp.addeventListener("click, e=> "{
+    btnSignUp.addEventListener("click", e=> {
     //Get email / pass
     //TODO: CHECK 4 REAL NUMBER
     const email = txtEmail.value;
     const pass = txtPassword.value;
     const auth = firebase.auth();
     //Sign in
-    const promise = auth.createUserWithEmailAndPassword(email,password);
+    const promise = auth.createUserWithEmailAndPassword(email, "password");
     promise.catch(e=>console.log(e.message));
   });
 
-  btnLogout.addeventListener('click', e=>{
+  btnLogout.addEventListener("click", e=>{
     firebase.auth().signOut();
   });
 
