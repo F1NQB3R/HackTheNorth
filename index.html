@@ -12,19 +12,9 @@
         <link rel = "stylesheet" href = "css/style.css" type = "text/css">
 
         <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyAYS_mXkzOluLBciiyPyJk092rc_-eCMvg",
-                authDomain: "hackthenorth-16b34.firebaseapp.com",
-                databaseURL: "https://hackthenorth-16b34.firebaseio.com",
-                projectId: "hackthenorth-16b34",
-                storageBucket: "hackthenorth-16b34.appspot.com",
-                messagingSenderId: "1089172554056"
-            };
 
-            firebase.initializeApp(config);
-        </script>
+
+
 
         <title>Connections</title>
     </head>
@@ -47,13 +37,20 @@
                     <a class = "nav-item nav-link text-white" href = "#">Peer Tutoring</a>
                     <a class = "nav-item nav-link text-white" href = "#">Other Services</a>
                     <a class = "nav-item nav-link text-white" href = "#">About</a>
-                    <a class = "nav-item nav-link text-white" href = "#">Log in</a>
+
+                    <input id="txtEmail" type="email" placeholder="Email">
+                    <input id="txtPassword" type="password" placeholder="Password">
+                    <button id="btnLogin" class="btn btn-action">Log In</button>
+                    <button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+                    <button id="btnLogout" class="btn btn-action hide">Log Out</button>
+
                 </div>
             </div>
         </nav>
 
         <h1 class = "display-4 text-center mt-5">Connections: Students teaching students</h3>
-        
+
+        <script src="script.js"></script>
          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src = "https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity = "sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin = "anonymous"></script>
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity = "sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin = "anonymous"></script>
