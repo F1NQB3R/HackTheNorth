@@ -1,57 +1,35 @@
-(function (){
-  // Initialize Firebase
-  const config = {
-      apiKey: "AIzaSyAYS_mXkzOluLBciiyPyJk092rc_-eCMvg",
-      authDomain: "hackthenorth-16b34.firebaseapp.com",
-      databaseURL: "https://hackthenorth-16b34.firebaseio.com",
-      projectId: "hackthenorth-16b34",
-      storageBucket: "hackthenorth-16b34.appspot.com",
-      messagingSenderId: "1089172554056"
-  };
-  
-  firebase.initializeApp(config);
-
-  //Get Elements
-  const txtEmail = document.getElementById('txtEmail');
-  const txtPassword = document.getElementById('txtPassword');
-  const btnLogin = document.getElementById('btnLogin');
-  const btnSignUp = document.getElementById('btnSignUp');
-  const btnLogout = document.getElementById('btnLogout');
-
-  //Add login event
-  btnLogin.addEventListener("click", e => {
-    //Get email / pass
-    const email = txtEmail.value;
-    const password = txtPassword.value;
-    const auth = firebase.auth();
-    //Sign in
-    const promise = auth.signInWithEmailAndPassword(email, password);
-    promise.catch(e=>console.log(e.message));
+//New Members
+<form>
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  var errorCode = error.code;
+  var errorMessage = error.message;
   });
+</form>
 
-  btnSignUp.addEventListener("click", e=> {
-    //Get email / pass
-    //TODO: CHECK 4 REAL NUMBER
-    const email = txtEmail.value;
-    const password = txtPassword.value;
-    const auth = firebase.auth();
-    //Sign in
-    const promise = auth.createUserWithEmailAndPassword(email, password);
-    promise.catch(e=>console.log(e.message));
-  });
+//Existing Users
+<form>
+  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  var errorCode = error.code;
+  var errorMessage = error.message;
+});
+</form>
 
-  btnLogout.addEventListener("click", e=>{
-    firebase.auth().signOut();
-  });
-
-  //Realtime Listener
-  firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (firebaseUser){
-      console.log(firebaseUser);
-      btnLogout.classList.remove('hide');
-    }else{
-      console.log('not logged in');
-      btnLogout.classList.add('hide');
+//Authentication State Oberver
+<form>
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      // ...
+    } else {
+      // User is signed out.
+      // ...
     }
   });
-}());
+</form>
