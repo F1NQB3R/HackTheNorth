@@ -21,11 +21,13 @@
         document.getElementById('loader').style.display = 'none';
       }
     },
+
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
     signInSuccessUrl: '<home.html>',
     signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID
+      firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID  
     ],
     // Terms of service url.
     tosUrl: '<main.html>',
