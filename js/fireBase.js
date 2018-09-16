@@ -12,4 +12,4 @@ var app_fireBase = {};
     firebase.initializeApp(config);
 
     app.fireBase = fireBase;
-}); 
+});
