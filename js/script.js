@@ -1,21 +1,21 @@
 //New Members
-<form>
+
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
   var errorCode = error.code;
   var errorMessage = error.message;
   });
-</form>
+
 
 //Existing Users
-<form>
+
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
   var errorCode = error.code;
   var errorMessage = error.message;
 });
-</form>
+
 
 //Authentication State Oberver
-<form>
+
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
@@ -32,4 +32,3 @@
       // ...
     }
   });
-</form>
