@@ -1,17 +1,17 @@
 //New Members
 
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  var errorCode = error.code;
-  var errorMessage = error.message;
+  firebase.auth().createUserWithEmailAndPassword("email", "password").catch(function(error) {
+  alert(error.code);
+  alert(error.message);
   });
 
 
 //Existing Users
 
-  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-  var errorCode = error.code;
-  var errorMessage = error.message;
-});
+  firebase.auth().signInWithEmailAndPassword("email", "password").catch(function(error) {
+  alert(error.code);
+  alert(error.message);
+  });
 
 
 //Authentication State Oberver

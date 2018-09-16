@@ -10,6 +10,16 @@
         <!--Bootstrap CSS-->
         <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
         <link rel = "stylesheet" href = "css/style.css" type = "text/css">
+
+        <!--Don't need all of these, but imported them all for convenience-->
+        <script src = "https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-auth.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-database.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/5.0.0/firebase-firestore.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-storage.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-messaging.js"></script>
+        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-functions.js"></script>
+
         <script>
         var config = {
             apiKey: "AIzaSyAYS_mXkzOluLBciiyPyJk092rc_-eCMvg",
@@ -19,20 +29,12 @@
             storageBucket: "hackthenorth-16b34.appspot.com",
             messagingSenderId: "1089172554056"
         };
-        var database = firebase.database();
-        var firebase = firebase.auth();
+        //var database = firebase.database();
+        //var firebase = firebase.auth();
 
         firebase.initializeApp(config);
 
         </script>
-        <!--Don't need all of these, but imported them all for convenience-->
-        <script src = "https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
-        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-auth.js"></script>
-        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-database.js"></script>
-        <script src = "https://www.gstatic.com/firebasejs/5.0.0/firebase-firestore.js"></script>
-        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-storage.js"></script>
-        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-messaging.js"></script>
-        <script src = "https://www.gstatic.com/firebasejs/5.5.0/firebase-functions.js"></script>
 
         <title>Connections</title>
     </head>
