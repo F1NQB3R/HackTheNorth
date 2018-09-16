@@ -10,6 +10,7 @@ var app_fireBase = {};
       storageBucket: "hackthenorth-16b34.appspot.com",
       messagingSenderId: "1089172554056"
     };
+    
     firebase.initializeApp(config);
 
     app.fireBase = firebase;
